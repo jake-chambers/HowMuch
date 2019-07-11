@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>HowMuch</title>
+</head>
+
+<body>
+    <div id="header">
+        <span>How Much</span>
+    </div>
+    <div id="main-content">
+        <div id="get-info">
+            <div>
+                <span>Select Ticker:</span>
+                <div class="autocomplete">
+                    <input id="myInput" placeholder="eg. GOOGL">
+                </div>
+            </div>
+            <div>
+                <span>Date Bought:</span>
+                <input placeholder="DD-MM-YYYY">
+            </div>
+        </div>
+        <div id="submit">
+            <button onclick = "heybuddy()">Submit</button>
+        </div>
+        <script src = "./symbols.js"></script>
+        <script src="./script.js"></script>
+        <script src="./autofill-script.js"></script>
+
+</body>
+
+</html>
