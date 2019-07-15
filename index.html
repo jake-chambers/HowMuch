@@ -6,7 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles.css">
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"
+    integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $("#datepicker").datepicker({
+                changeMonth: true,
+                changeYear: true
+            });
+        });
+    </script>
     <title>HowMuch</title>
 </head>
 
@@ -19,23 +29,26 @@
             <div>
                 <span>Select Ticker</span>
                 <div class="autocomplete">
-                    <input onblur="this.placeholder = 'eg. GOOGL'" onfocus="this.placeholder = ''" id="tickerInput" placeholder="eg. GOOGL">
+                    <input onblur="this.placeholder = 'eg. GOOGL'" onfocus="this.placeholder = ''" id="tickerInput"
+                        placeholder="eg. GOOGL">
                 </div>
             </div>
             <div>
                 <span>Date Bought</span>
-                <input onblur="this.placeholder = 'YYYY-MM-DD'" onfocus="this.placeholder = ''" id = "dateInput" placeholder="YYYY-MM-DD">
+                <input class = "ui-datepicker" id = "datepicker" onblur="this.placeholder = 'YYYY-MM-DD'" onfocus="this.placeholder = ''" id="dateInput"
+                    placeholder="YYYY-MM-DD">
             </div>
             <div>
                 <span>Number of Shares</span>
-                <input onblur="this.placeholder = 'eg. 2'" onfocus="this.placeholder = ''" id = "numberOfShares" placeholder = "eg. 2">
+                <input onblur="this.placeholder = 'eg. 2'" onfocus="this.placeholder = ''" id="numberOfShares"
+                    placeholder="eg. 2">
             </div>
         </div>
         <div id="submit">
             <button onclick="getInfo()">Submit</button>
         </div>
 
-        <div id = "result">
+        <div id="result">
         </div>
 
     </div>
@@ -44,7 +57,8 @@
     <script src="./symbols.js"></script>
     <script src="./script.js"></script>
     <script src="./autofill-script.js"></script>
-    
+
+
 </body>
 
 </html>
