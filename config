@@ -1,4 +1,0 @@
-API_KEY: MT81UG9QNO8YFAJN
-
-https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=MSFT&apikey=MT81UG9QNO8YFAJN
-&outputsize=full

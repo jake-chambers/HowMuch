@@ -35,9 +35,11 @@ input::placeholder {
     font-family: "Montserrat";
     font-weight: 100
 }
-#number{
+
+#number {
     font-size: 3em;
 }
+
 input:focus {
     outline-width: 0px;
 }
@@ -53,7 +55,7 @@ input:focus {
     margin-bottom: 5%;
 }
 
-#get-info > div {
+#get-info>div {
     display: grid;
     place-items: center center;
 }
