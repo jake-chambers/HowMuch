@@ -28,7 +28,7 @@ function getInfo() {
             let priceThen = tickerThen['4. close'];
             let priceNow = tickerNow['4. close']
 
-            document.getElementById('result').innerHTML = '<p>If you bought ' + numShares + ' shares of ' + ticker + ' on ' + date + ', it is now worth <i>approximately</i> : <br><br><span id = "number">$' + calculateEarnings(priceThen, priceNow, numShares) + '</span></p>';
+            document.getElementById('result').innerHTML = '<p>If you bought ' + numShares + ' shares of ' + ticker + ' on ' + date + ' ($'+priceNow+'), it is now worth <i>approximately</i> : <br><br><span id = "number">$' + calculateEarnings(priceThen, priceNow, numShares) + '</span></p>';
 
         })
         .catch(err => {
