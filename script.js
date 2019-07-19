@@ -23,12 +23,13 @@ function getInfo() {
 
     axios.get('https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=' + ticker + '&apikey=MT81UG9QNO8YFAJN&outputsize=full', body)
         .then(data => {
+            console.log(data);
             let tickerThen = data.data['Time Series (Daily)'][date];
             let tickerNow = data.data['Time Series (Daily)'][today];
             let priceThen = tickerThen['4. close'];
             let priceNow = tickerNow['4. close']
 
-            document.getElementById('result').innerHTML = '<p>If you bought ' + numShares + ' shares of ' + ticker + ' on ' + date + ' ($'+priceNow+'), it is now worth <i>approximately</i> : <br><br><span id = "number">$' + calculateEarnings(priceThen, priceNow, numShares) + '</span></p>';
+            document.getElementById('result').innerHTML = '<p>If you bought ' + numShares + ' shares of ' + ticker + ' on ' + date + ' (1 share = $'+priceThen+'), it is now worth <i>approximately</i> : <br><br><span id = "number">$' + calculateEarnings(priceThen, priceNow, numShares) + '</span></p>';
 
         })
         .catch(err => {
@@ -56,7 +57,6 @@ function calculateEarnings(priceThen, priceNow, numShares) {
     }
 
     result = result * parseInt(numShares);
-    console.log(result);
     result = Number(Math.round(result + 'e2') + 'e-2');
     return result;
 }
